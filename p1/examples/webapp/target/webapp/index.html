@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home – Webapp archetype</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <div>
+      <form action="EchoServlet">
+        <input type="text" id="name" name="message" />
+        <input type="submit" value="Send4Echo" />
+      </form>
+    </div>
+    <br>
+    </div>
+      <a href="EchoServlet?message="
+         onclick="this.href+=document.getElementById('name').value">
+        Go EchoServlet!
+      </a>
+    </div>
+  </body>
+</html>

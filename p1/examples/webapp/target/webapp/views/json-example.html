@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON – Webapp archetype</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+		<h2>JSON Example</h2>
+		<script>
+			var datos = {
+			  "departamento": 8,
+			  "nombre": "Ventas",
+			  "director": "Juan Rodríguez",
+			  "empleados":[
+					{
+			      "nombre":"Pedro",
+			      "apellido":"Fernández"
+			    },{
+			      "nombre":"Jacinto",
+			      "apellido":"Benavente"
+			    } 
+			  ]
+			};
+			console.log(datos.empleados[0].nombre);
+			console.log(datos["empleados"][1].nombre);
+		</script>
+</body>
+</html>
