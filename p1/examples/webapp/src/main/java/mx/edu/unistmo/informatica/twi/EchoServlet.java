@@ -19,6 +19,7 @@ public class EchoServlet extends HttpServlet
     response.setCharacterEncoding("UTF-8");
 
     PrintWriter out = response.getWriter();
+    String msg = request.getParameter("message");
 
     out.println("<!DOCTYPE html>");
     out.println("<html>");
@@ -28,7 +29,7 @@ public class EchoServlet extends HttpServlet
     out.println("</head>");
     out.println("<body>");
     out.println("<h1>EchoServlet!</h1>");
-    out.println("Message: " + request.getParameter("message"));
+    out.println("Message: " + ((msg != null) ? msg : ""));
     out.println("</body>");
     out.println("</html>");
   }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-language" content="en">
+    <meta charset="UTF-8">
+    <title>Home – CalcServlet</title>
+  <body>
+    <h1>CalcServlet – Home</h1>
+
+    <form action="/echo-servlet/servlets/CalcServlet" method="get">
+      <label for="a">1st operand:</label>
+      <br>
+      <input type="number" name="a" required value="0" min="0" step="1" />
+        <!-- onchange="this.value=this.value.toLocaleString()" -->
+      <br>
+      <label for="b">2nd operand:</label>
+      <br>
+      <input type="number" name="b" required value="1" min="1" step="1" />
+      <br>
+      <label for="operation">Operation:</label>
+      <br>
+      <select name="operation">
+        <option value="ADD">+</option>
+        <option value="SUB">-</option>
+        <option value="MUL">*</option>
+        <option value="DIV">/</option>
+      </select>
+      <input type="submit" value="Send2Calc" />
+    </form>
+  </body>
+</html>
