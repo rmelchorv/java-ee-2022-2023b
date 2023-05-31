@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Examen</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h2>Hello World!</h2>
+
+    <h3>Salario</h3>
+    <form action="/examen/servlets/Salario" method="post">
+
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <br>
+      <input type="number" name="salario" placeholder="Salario" required>
+      <br>
+      <input type="number" name="dias" min="1" max="15" placeholder="Días trabajados" required>
+      <input type="submit" value="Enviar">
+
+    </form>
+    <br>
+    <br>
+    <h3>Ecuación de segundo grado</h3>
+    <form action="/examen/servlets/Ecuacion" method="get">
+
+      <input type="number" name="a" placeholder="a" step="1" required>
+      <br>
+      <input type="number" name="b" placeholder="b" step="1" required>
+      <br>
+      <input type="number" name="c" placeholder="c" step="1" required>
+      <input type="submit" value="Enviar">
+
+    </form>
+
+  </body>
+</html>

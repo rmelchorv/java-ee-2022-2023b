@@ -1,7 +1,8 @@
-package mx.edu.unistmo.informatica.twi;
+package mx.edu.unistmo.informatica.twi.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.Locale;
 
 import jakarta.servlet.ServletException;
@@ -59,5 +60,23 @@ public class CalcServlet extends HttpServlet
       "</html>"
     );
     out.println(html);
+  }
+
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException 
+  {
+    //response.setContentType("text/plain");
+    //response.setCharacterEncoding("UTF-8");
+
+    //PrintWriter out = response.getWriter();
+
+    request.setAttribute("ATTR-1", 1990);
+    request.setAttribute("ATTR-2", new Date(0));
+    request.setAttribute("ATTR-3", "Hola mundo!");
+    
+    //request.getRequestDispatcher("./NewServlet").forward(request, response);
+    response.sendRedirect("./NewServlet");
+
+    //out.println("Método POST.");
   }
 }

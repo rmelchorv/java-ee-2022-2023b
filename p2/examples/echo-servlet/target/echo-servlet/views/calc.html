@@ -25,7 +25,17 @@
         <option value="MUL">*</option>
         <option value="DIV">/</option>
       </select>
-      <input type="submit" value="Send2Calc" />
+      <input type="submit" value="Send2Calc (GET)" />
     </form>
+
+    <div>
+      <br><br><br>
+      <form action="/echo-servlet/servlets/CalcServlet" method="post">
+        <input type="number" name="a" required value="1" readonly /><br>
+        <input type="number" name="b" required value="2" readonly /><br>
+        <input type="number" name="c" required value="3" readonly /><br>
+        <input type="submit" value="Send2Calc (POST)" />
+      </form>
+    </div>
   </body>
 </html>
