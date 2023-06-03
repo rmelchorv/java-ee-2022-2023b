@@ -10,7 +10,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,13 +19,16 @@
 *.tar.gz
 *.rar
 
-## target folder at the top level of the project structue and paths and contents underneath it
+# Properties file
+*.properties
+
+# target folder at the top level of the project structue and paths and contents underneath it
 target/
 target/*
 
 EBAC/
 
-## target folder at any level of the project structue
+# target folder at any level of the project structue
 **/target
 /target 
 
