@@ -26,10 +26,21 @@
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core -->
-    <dependency>
+    <!-- dependency>
       <groupId>org.twitter4j</groupId>
       <artifactId>twitter4j-core</artifactId>
       <version>4.1.2</version>
+    </dependency -->
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <!-- dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.14</version>
+    </dependency -->
+    <dependency>
+      <groupId>com.twitter</groupId>
+      <artifactId>twitter-api-java-sdk</artifactId>
+      <version>2.0.3</version>
     </dependency>
   </dependencies>
 

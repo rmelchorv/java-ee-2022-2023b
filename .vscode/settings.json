@@ -2,5 +2,6 @@
   "java.configuration.updateBuildConfiguration": "interactive",
   "java.dependency.packagePresentation": "flat",
   "java.project.explorer.showNonJavaResources": false,
-  "maven.view": "flat"
+  "maven.view": "flat",
+  "java.compile.nullAnalysis.mode": "automatic"
 }
