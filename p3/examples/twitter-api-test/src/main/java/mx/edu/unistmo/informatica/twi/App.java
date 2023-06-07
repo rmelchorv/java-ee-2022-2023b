@@ -1,66 +1,56 @@
 package mx.edu.unistmo.informatica.twi;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.config.CookieSpecs;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import com.twitter.clientlib.TwitterCredentialsOAuth2;
+import com.twitter.clientlib.ApiException;
+import com.twitter.clientlib.api.TwitterApi;
+import com.twitter.clientlib.model.*;
 
 /*
  * Sample code to demonstrate the use of the v2 User Tweet timeline endpoint
  * */
 public class App {
+  public static void main(String[] args) {
+    /**
+     * Set the credentials for the required APIs.
+     * The Java SDK supports TwitterCredentialsOAuth2 & TwitterCredentialsBearer.
+     * Check the 'security' tag of the required APIs in https://api.twitter.com/2/openapi.json in order
+     * to use the right credential object.
+     */
+    TwitterApi apiInstance = new TwitterApi(new TwitterCredentialsOAuth2(
+          System.getenv("TWITTER_OAUTH2_CLIENT_ID"),
+          System.getenv("TWITTER_OAUTH2_CLIENT_SECRET"),
+          System.getenv("TWITTER_OAUTH2_ACCESS_TOKEN"),
+          System.getenv("TWITTER_OAUTH2_REFRESH_TOKEN")));
 
-  // To set your environment variables in your terminal run the following line:
-  // export 'BEARER_TOKEN'='<your_bearer_token>'
+    Set<String> tweetFields = new HashSet<>();
+    tweetFields.add("author_id");
+    tweetFields.add("id");
+    tweetFields.add("created_at");
 
-  public static void main(String args[]) throws IOException, URISyntaxException {
-    final String bearerToken = System.getenv("BEARER_TOKEN");
+    try {
+    // findTweetById
+    Get2TweetsIdResponse result = apiInstance.tweets().findTweetById("1")
+      .tweetFields(tweetFields)
+      .execute();
+    if(result.getErrors() != null && result.getErrors().size() > 0) {
+      System.out.println("Error:");
 
-    if (null != bearerToken) {
-      // Replace with user ID below
-      String response = getTweets("79032852", bearerToken);
-      System.out.println(response);
+      result.getErrors().forEach(e -> {
+        System.out.println(e.toString());
+        if (e instanceof ResourceUnauthorizedProblem) {
+          System.out.println(((ResourceUnauthorizedProblem) e).getTitle() + " " + ((ResourceUnauthorizedProblem) e).getDetail());
+        }
+      });
     } else {
-      System.out.println("There was a problem getting your bearer token. Please make sure you set the BEARER_TOKEN environment variable");
+      System.out.println("findTweetById - Tweet Text: " + result.toString());
     }
-  }
-
-  /*
-   * This method calls the v2 User Tweet timeline endpoint by user ID
-   * */
-  private static String getTweets(String userId, String bearerToken) throws IOException, URISyntaxException {
-    String tweetResponse = null;
-    HttpClient httpClient = HttpClients.custom()
-        .setDefaultRequestConfig(RequestConfig.custom()
-            .setCookieSpec(CookieSpecs.STANDARD).build())
-        .build();
-
-    URIBuilder uriBuilder = new URIBuilder(String.format("https://api.twitter.com/2/users/%s/tweets", userId));
-    ArrayList<NameValuePair> queryParameters;
-    queryParameters = new ArrayList<>();
-    queryParameters.add(new BasicNameValuePair("tweet.fields", "created_at"));
-    uriBuilder.addParameters(queryParameters);
-
-    HttpGet httpGet = new HttpGet(uriBuilder.build());
-    httpGet.setHeader("Authorization", String.format("Bearer %s", bearerToken));
-    httpGet.setHeader("Content-Type", "application/json");
-
-    HttpResponse response = httpClient.execute(httpGet);
-    HttpEntity entity = response.getEntity();
-    if (null != entity) {
-      tweetResponse = EntityUtils.toString(entity, "UTF-8");
+    } catch (ApiException e) {
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
-    return tweetResponse;
   }
 }

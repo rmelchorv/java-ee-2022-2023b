@@ -1,4 +1,6 @@
-/home/ricardo/Downloads/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/EchoServlet.java
-/home/ricardo/Downloads/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/NewServlet.java
-/home/ricardo/Downloads/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/InfoServlet.java
-/home/ricardo/Downloads/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/CalcServlet.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/controllers/InfoServlet.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/controllers/EchoServlet.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/model/DBManager.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/controllers/NewServlet.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/controllers/CalcServlet.java
+/home/ricardo/Documents/UNISTMO/Docencia/Asignaturas/2022-2023/B/6o-TecWeb-I/Material/java-ee/p2/examples/echo-servlet/src/main/java/mx/edu/unistmo/informatica/twi/controllers/UsersServlet.java
