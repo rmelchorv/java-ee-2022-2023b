@@ -1,4 +1,4 @@
-package salario.control;
+package mx.edu.unistmo.informatica.twi.p2.controllers.control;
 
 import java.io.IOException;
 import java.io.PrintWriter;

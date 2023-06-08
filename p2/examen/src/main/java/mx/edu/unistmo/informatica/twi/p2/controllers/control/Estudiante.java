@@ -1,4 +1,4 @@
-package jsp.ejemplo;
+package mx.edu.unistmo.informatica.twi.p2.controllers.control;
 
 public class Estudiante {
 

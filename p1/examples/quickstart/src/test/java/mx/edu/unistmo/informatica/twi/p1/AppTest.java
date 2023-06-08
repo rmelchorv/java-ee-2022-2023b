@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi;
+package mx.edu.unistmo.informatica.twi.p1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

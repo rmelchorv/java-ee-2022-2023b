@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi;
+package mx.edu.unistmo.informatica.twi.p1;
 
 import java.io.IOException;
 import java.io.PrintWriter;

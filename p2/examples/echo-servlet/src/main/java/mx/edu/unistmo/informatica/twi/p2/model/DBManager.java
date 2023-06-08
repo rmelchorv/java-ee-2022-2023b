@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi.model;
+package mx.edu.unistmo.informatica.twi.p2.model;
 
 import java.sql.Connection;
 import java.sql.SQLException;

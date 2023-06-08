@@ -1,24 +1,36 @@
-package mx.edu.unistmo.informatica.twi.controllers;
+package mx.edu.unistmo.informatica.twi.p2.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import mx.edu.unistmo.informatica.twi.p2.model.DBManager;
 
-@WebServlet(name="NewServlet", urlPatterns={ "/servlets/NewServlet" })
-public class NewServlet extends HttpServlet
+@WebServlet(name="UsersServlet", urlPatterns={ "/servlets/UsersServlet" })
+public class UsersServlet extends HttpServlet
 {
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     response.setContentType("text/html");
     response.setCharacterEncoding("UTF-8");
 
     PrintWriter out = response.getWriter();
+
+    DBManager dbManager = new DBManager("org.postgresql.Driver", "jdbc:postgresql://localhost:5432/twi");
+
+    try {
+      dbManager.openConnection();
+    } catch (ClassNotFoundException | SQLException e) {
+      e.printStackTrace();
+    } finally {
+      dbManager.closeConnection(null);
+    }
 
     String html = String.join("\n", "<!DOCTYPE html>",
       "<html lang=\"es\">",

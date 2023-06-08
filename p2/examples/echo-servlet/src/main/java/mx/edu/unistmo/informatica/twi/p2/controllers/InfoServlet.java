@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi.controllers;
+package mx.edu.unistmo.informatica.twi.p2.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;

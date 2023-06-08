@@ -1,4 +1,4 @@
-package bean.example;
+package mx.edu.unistmo.informatica.twi.p2.models;
 
 public class StudentBean implements java.io.Serializable {
   private String name;

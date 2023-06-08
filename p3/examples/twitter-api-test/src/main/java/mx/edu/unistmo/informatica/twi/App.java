@@ -1,11 +1,13 @@
 package mx.edu.unistmo.informatica.twi;
 
+/*
 import java.util.HashSet;
 import java.util.Set;
 import com.twitter.clientlib.TwitterCredentialsOAuth2;
 import com.twitter.clientlib.ApiException;
 import com.twitter.clientlib.api.TwitterApi;
 import com.twitter.clientlib.model.*;
+*/
 
 /*
  * Sample code to demonstrate the use of the v2 User Tweet timeline endpoint
@@ -18,6 +20,7 @@ public class App {
      * Check the 'security' tag of the required APIs in https://api.twitter.com/2/openapi.json in order
      * to use the right credential object.
      */
+    /*
     TwitterApi apiInstance = new TwitterApi(new TwitterCredentialsOAuth2(
           System.getenv("TWITTER_OAUTH2_CLIENT_ID"),
           System.getenv("TWITTER_OAUTH2_CLIENT_SECRET"),
@@ -52,5 +55,6 @@ public class App {
       System.err.println("Response headers: " + e.getResponseHeaders());
       e.printStackTrace();
     }
+    */
   }
 }
