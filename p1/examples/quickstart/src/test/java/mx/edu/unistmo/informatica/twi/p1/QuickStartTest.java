@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class QuickStartTest 
 {
     /**
      * Rigorous Test :-)
@@ -24,7 +24,7 @@ public class AppTest
         int a = 5;
         int b = 3;
         int c = 7;
-        App instance = new App();
+        QuickStart instance = new QuickStart();
         int expResult = 7;
         int result = instance.numeroMayor(a, b, c);
         assertEquals(expResult, result);        
@@ -35,7 +35,7 @@ public class AppTest
         int a = 5;
         int b = 3;
         int c = 4;
-        App instance = new App();
+        QuickStart instance = new QuickStart();
         int expResult = 5;
         int result = instance.numeroMayor(a, b, c);
         assertEquals(expResult, result);        
@@ -46,7 +46,7 @@ public class AppTest
         int a = 5;
         int b = 7;
         int c = 6;
-        App instance = new App();
+        QuickStart instance = new QuickStart();
         int expResult = 7;
         int result = instance.numeroMayor(a, b, c);
         assertEquals(expResult, result);        
@@ -57,7 +57,7 @@ public class AppTest
         int a = 5;
         int b = 7;
         int c = 9;
-        App instance = new App();
+        QuickStart instance = new QuickStart();
         int expResult = 9;
         int result = instance.numeroMayor(a, b, c);
         assertEquals(expResult, result);        

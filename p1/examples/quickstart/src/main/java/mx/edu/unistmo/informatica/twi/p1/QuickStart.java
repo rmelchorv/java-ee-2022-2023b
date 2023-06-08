@@ -4,7 +4,7 @@ package mx.edu.unistmo.informatica.twi.p1;
  * Hello world!
  *
  */
-public class App 
+public class QuickStart 
 {
     public static void main( String[] args )
     {
