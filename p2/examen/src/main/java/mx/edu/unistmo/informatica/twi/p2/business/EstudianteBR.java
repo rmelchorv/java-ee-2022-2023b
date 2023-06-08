@@ -1,6 +1,6 @@
-package mx.edu.unistmo.informatica.twi.p2.controllers.control;
+package mx.edu.unistmo.informatica.twi.p2.business;
 
-public class Estudiante {
+public class EstudianteBR {
 
   public String[] obtener() {
     return new String[] {

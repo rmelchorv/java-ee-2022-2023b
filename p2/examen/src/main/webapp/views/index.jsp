@@ -1,5 +1,5 @@
 <jsp:forward url="index.html" />
-<%@ page import="jsp.ejemplo.Estudiante;" %>
+<%@ page import="mx.edu.unistmo.informatica.twi.p2.business.EstudianteBR;" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,8 +15,8 @@
 
         int filas = Integer.parseInt(request.getParameter("filas"));
 
-        //Calculadora calc = new Calculadora(a, b);
-        Estudiante estudiante = new Estudiante();
+        //CalculadoraBR calc = new CalculadoraBR(a, b);
+        EstudianteBR estudiante = new EstudianteBR();
         String[] estudiantes = estudiante.obtener();
 
         if (nombre == null) {

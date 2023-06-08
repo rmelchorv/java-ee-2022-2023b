@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi.p2.controllers.control;
+package mx.edu.unistmo.informatica.twi.p2.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name="Ecuacion", urlPatterns={"/servlets/Ecuacion"})
-public class Ecuacion extends HttpServlet
+@WebServlet(name="EcuacionServlet", urlPatterns={"/servlets/EcuacionServlet"})
+public class EcuacionServlet extends HttpServlet
 {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException

@@ -1,4 +1,4 @@
-<%@ page import="bean.example.StudenBean" %>
+<%@ page import="mx.edu.unistmo.informatica.twi.p2.models.StudenBean" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +7,7 @@
     <body>
         <h2>Beans</h2>
 
-        <jsp:useBean id="student" class="bean.example.StudenBean" />
+        <jsp:useBean id="student" class="mx.edu.unistmo.informatica.twi.p2.models.StudenBean" />
 
         <jsp:setProperty name="student" property="name" value="Ricardo" />
 
