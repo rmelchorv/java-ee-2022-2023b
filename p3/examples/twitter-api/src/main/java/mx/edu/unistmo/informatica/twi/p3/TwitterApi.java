@@ -1,4 +1,4 @@
-package mx.edu.unistmo.informatica.twi;
+package mx.edu.unistmo.informatica.twi.p3;
 
 /*
 import java.util.HashSet;
@@ -12,7 +12,7 @@ import com.twitter.clientlib.model.*;
 /*
  * Sample code to demonstrate the use of the v2 User Tweet timeline endpoint
  * */
-public class App {
+public class TwitterApi {
   public static void main(String[] args) {
     /**
      * Set the credentials for the required APIs.

@@ -6,10 +6,12 @@
         response.sendRedirect("../index.jsp");
     } else {
 %>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Session Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
   <body>
     <h3>Id: <%= currentSession.getId() %></h3>
     <h3>Username: <%= currentSession.getAttribute("username") %></h3>

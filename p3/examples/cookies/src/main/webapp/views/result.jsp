@@ -13,10 +13,12 @@
         if (cookie.getName().equals("color"))
           color = cookie.getValue();
 %>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Cookie Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
   <body>
     <h3>
       Color selected:&nbsp;

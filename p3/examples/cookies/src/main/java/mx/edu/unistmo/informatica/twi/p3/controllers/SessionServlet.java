@@ -1,4 +1,4 @@
-package controllers.cookies;
+package mx.edu.unistmo.informatica.twi.p3.controllers;
 
 import java.io.IOException;
 

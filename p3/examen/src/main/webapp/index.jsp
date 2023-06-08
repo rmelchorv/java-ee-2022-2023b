@@ -1,5 +1,10 @@
+<!DOCTYPE html>
 <html>
-<body>
-<h2>Hello World!</h2>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Examen – Parcial 3</title>
+  </head>
+  <body>
+    <h2>Examen – Parcial 3</h2>
+  </body>
 </html>

@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Cookie Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
   <body>
     <h2>Cookie Example!</h2>
     <div>
