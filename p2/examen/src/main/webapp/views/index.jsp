@@ -1,5 +1,6 @@
-<jsp:forward url="index.html" />
 <%@ page import="mx.edu.unistmo.informatica.twi.p2.business.EstudianteBR;" %>
+
+<jsp:forward url="index.html" />
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,7 @@
     <title>Ejemplo JSP</title>
   </head>
   <body>
-    <h1>
+    <h2>
       <%
         String nombre = request.getParameter("nombre");
         //int a = Integer.parseInt(request.getParameter("a"));
@@ -25,7 +26,7 @@
       %>
       <%= nombre %>
       <br>
-    </h1>
+    </h2>
 
     <table style="border: 1px solid black;">
       <% for (int i = 0; i < filas; i++) { %>

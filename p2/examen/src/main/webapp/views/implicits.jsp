@@ -2,9 +2,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Implicit objects</title>
+    <title>Implicit objects example</title>
+    <meta charset="UTF-8">
   </head>
   <body>
+    <h2>Using Implicit Objects</h2>
+
     <% 
       out.println("Today's date-time: " + java.util.Calendar.getInstance().getTime());
     %>
