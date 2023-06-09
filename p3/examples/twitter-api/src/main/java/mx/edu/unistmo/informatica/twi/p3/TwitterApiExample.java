@@ -33,7 +33,7 @@ public class TwitterApiExample {
 
     try {
       // findTweetById
-      Get2TweetsIdResponse result = apiInstance.tweets().findTweetById("1")
+      Get2TweetsIdResponse result = apiInstance.tweets().findTweetById("20")
         .tweetFields(tweetFields)
         .execute();
       List<Problem> errors = result.getErrors();
